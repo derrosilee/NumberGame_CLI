@@ -13,11 +13,11 @@ def number_generator():  # will add function
     # Capturing users input on guessed Number
     answer = int(input("Enter First Guess: "))
     # Condition Checking
-    if answer == generated_number:
-        print(f"Congratulations u won the number is {generated_number}")
-    else:
+    while answer != generated_number:
         print("Naaa That ain't it try again")
-    return number_range1, number_range2, generated_number
+        answer = int(input("Enter First Guess: "))
+    else:
+        print(f"Congratulations u won the number is {generated_number}")
 
 
 if __name__ == '__main__':
