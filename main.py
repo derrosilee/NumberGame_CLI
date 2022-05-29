@@ -16,8 +16,9 @@ def number_generator():  # will add function
     while answer != generated_number:
         print("Naaa That ain't it try again")
         answer = int(input("Enter First Guess: "))
-    else:
-        print(f"Congratulations u won the number is {generated_number}")
+        if answer == generated_number:
+            break
+    print(f"Congratulations u won the number is {generated_number}")
 
 
 if __name__ == '__main__':
